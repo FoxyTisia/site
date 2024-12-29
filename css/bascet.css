@@ -89,9 +89,3 @@
 header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-.nav-item .btn {
-    font-family: 'Lexend', sans-serif;
-    text-transform: uppercase;
-    font-size: 1.25rem; /* Збільшено розмір тексту */
-}
