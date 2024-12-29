@@ -1,0 +1,97 @@
+/* Загальний контейнер для корзини */
+.cart-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Карточка товару */
+.card {
+    margin: 15px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+/* Заголовок товару */
+.card-title {
+    font-family: 'Lexend', sans-serif;
+    font-size: 2rem; /* Збільшено розмір тексту */
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Опис товару */
+.card-text {
+    font-family: 'Lexend', sans-serif;
+    font-size: 1.25rem; /* Збільшено розмір тексту */
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Ціна товару */
+.card-text.fw-bold {
+    font-size: 1.5rem; /* Збільшено розмір тексту */
+    color: #ff5722;
+}
+
+/* Кнопка "В корзину" */
+.c-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.25rem; /* Збільшено розмір тексту */
+    text-transform: uppercase;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.c-button:hover {
+    background-color: #e64a19;
+}
+
+/* Список товарів у корзині */
+.cart-container > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-container p {
+    margin: 0;
+    font-family: 'Lexend', sans-serif;
+    font-size: 1.25rem; /* Збільшено розмір тексту */
+    color: #333;
+}
+
+/* Стилі для шапки */
+header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item .btn {
+    font-family: 'Lexend', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.25rem; /* Збільшено розмір тексту */
+}
