@@ -92,12 +92,16 @@ function getCookieValue(cookieName) {
 
 function getCartProductHtml(item) {
   return `
-      <div style="border: 1px solid black">
+      <div style="border: 1px solid black; display: flex; align-items: center; justify-content: space-between; padding: 10px;">
           <p>${item.title}</p>
           <p>${item.price}</p>
-          <p>${item.quantity}</p>
+          <div>
+              <button class="quantity-btn" data-title="${item.title}" data-action="decrease">-</button>
+              <span>${item.quantity}</span>
+              <button class="quantity-btn" data-title="${item.title}" data-action="increase">+</button>
+          </div>
       </div>
-`
+  `;
 }
 
 function showCart() {
@@ -109,6 +113,38 @@ function showCart() {
   }
 
   cart.loadCartToCookies()
+}
+function updateCartItem(event) {
+  const button = event.target;
+  const title = button.getAttribute('data-title');
+  const action = button.getAttribute('data-action');
+
+  if (cart.items[title]) {
+      if (action === 'increase') {
+          cart.items[title].quantity += 1;
+      } else if (action === 'decrease' && cart.items[title].quantity > 1) {
+          cart.items[title].quantity -= 1;
+      } else if (action === 'decrease' && cart.items[title].quantity === 1) {
+          delete cart.items[title]; 
+      }
+      cart.saveCartToCookies();
+      showCart(); 
+  }
+}
+
+function showCart() {
+  const cartContainer = document.querySelector('.cart-container');
+  cartContainer.innerHTML = '';
+  for (let key in cart.items) {
+      cartContainer.innerHTML += getCartProductHtml(cart.items[key]);
+  }
+  cart.loadCartToCookies();
+
+ 
+  const quantityButtons = document.querySelectorAll('.quantity-btn');
+  quantityButtons.forEach(button => {
+      button.addEventListener('click', updateCartItem);
+  });
 }
 
 showCart()

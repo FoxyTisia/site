@@ -1,4 +1,4 @@
-/* Загальний контейнер для корзини */
+
 .cart-container {
     max-width: 800px;
     margin: 20px auto;
@@ -9,7 +9,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Карточка товару */
+
 .card {
     margin: 15px auto;
     border: 1px solid #ccc;
@@ -26,36 +26,36 @@
     padding: 15px;
 }
 
-/* Заголовок товару */
+
 .card-title {
     font-family: 'Lexend', sans-serif;
-    font-size: 2rem; /* Збільшено розмір тексту */
+    font-size: 2rem; 
     color: #333;
     margin-bottom: 10px;
     text-align: center;
 }
 
-/* Опис товару */
+
 .card-text {
     font-family: 'Lexend', sans-serif;
-    font-size: 1.25rem; /* Збільшено розмір тексту */
+    font-size: 1.25rem; 
     color: #666;
     margin-bottom: 10px;
     text-align: center;
 }
 
-/* Ціна товару */
+
 .card-text.fw-bold {
-    font-size: 1.5rem; /* Збільшено розмір тексту */
+    font-size: 1.5rem; 
     color: #ff5722;
 }
 
-/* Кнопка "В корзину" */
+
 .c-button {
     display: block;
     width: 100%;
     padding: 12px;
-    font-size: 1.25rem; /* Збільшено розмір тексту */
+    font-size: 1.25rem; 
     text-transform: uppercase;
     background-color: #ff5722;
     color: #fff;
@@ -69,7 +69,7 @@
     background-color: #e64a19;
 }
 
-/* Список товарів у корзині */
+
 .cart-container > div {
     display: flex;
     justify-content: space-between;
@@ -81,11 +81,25 @@
 .cart-container p {
     margin: 0;
     font-family: 'Lexend', sans-serif;
-    font-size: 1.25rem; /* Збільшено розмір тексту */
+    font-size: 1.25rem; 
     color: #333;
 }
 
-/* Стилі для шапки */
+
 header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quantity-btn {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.quantity-btn:hover {
+    background-color: #e0e0e0;
 }
