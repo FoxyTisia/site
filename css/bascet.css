@@ -103,3 +103,22 @@ header {
 .quantity-btn:hover {
     background-color: #e0e0e0;
 }
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #218838;
+}
+
